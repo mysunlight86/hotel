@@ -4,6 +4,8 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
 
 module.exports = {
+    mode: 'development',
+    
     entry: './home',
     output: {
         filename: 'build.js',
@@ -16,11 +18,21 @@ module.exports = {
         aggregateTimeout: 100
     },
 
-    devtool: NODE_ENV === 'development' ? 'source-map' : undefined,
+    devtool: NODE_ENV === 'development' ? 'inline-cheap-module-source-map' : undefined,
 
     plugins: [
         new webpack.DefinePlugin({
             NODE_ENV: JSON.stringify(NODE_ENV)
         })
-    ]
+    ],
+
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: ['babel-loader'],
+            },
+        ],
+    }
 };
