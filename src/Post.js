@@ -1,4 +1,6 @@
-class Post {
+'use strict';
+
+export default class Post {
     constructor(title) {
         this.title = title;
         this.date = new Date();
@@ -11,4 +13,4 @@ class Post {
             date: this.date // можно и так
         });
     }
-}
+};
