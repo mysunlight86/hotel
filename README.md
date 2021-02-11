@@ -1,8 +1,13 @@
 # Hotel
 
-## Обзор
+## Overview
+* Intro
 * Project deployment
 * Technologies
+
+### Intro
+
+Project for page layout for finding hotel rooms
 
 ### Project deployment
 
