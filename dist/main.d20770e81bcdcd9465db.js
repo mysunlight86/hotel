@@ -1,1 +1,0 @@
-(()=>{"use strict";const t=new class{constructor(t){this.title=t,this.date=new Date}toString(){return JSON.stringify({title:this.title,date:this.date})}}("Временный пост");console.log("Пост в строку: ",t.toString())})();
