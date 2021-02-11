@@ -4,14 +4,19 @@
   "description": "### Обзор * Technologies",
   "main": "home.js",
   "scripts": {
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode=development",
+    "build": "webpack --mode=production"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mysunlight86/hotel.git"
   },
-  "author": "Nadezhda Malokhatko",
+  "keywords": [
+    "js",
+    "javascript",
+    "webpack"
+  ],
+  "author": "Nadezhda Malokhatko <mysunlight86@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mysunlight86/hotel/issues"
