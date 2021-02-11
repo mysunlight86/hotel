@@ -1,6 +1,7 @@
 'use strict';
 
 const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 // const NODE_ENV = process.env.NODE_ENV || 'development';
 // const webpack = require('webpack');
@@ -16,6 +17,11 @@ module.exports = {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist')
     },
+    plugins: [
+        new HTMLWebpackPlugin({
+            title: 'test'
+        })
+    ],
 
     // watch: NODE_ENV === 'development',
 
@@ -24,12 +30,6 @@ module.exports = {
     // },
 
     // devtool: NODE_ENV === 'development' ? 'inline-cheap-module-source-map' : undefined,
-
-    // plugins: [
-    //     new webpack.DefinePlugin({
-    //         NODE_ENV: JSON.stringify(NODE_ENV)
-    //     })
-    // ],
 
     // module: {
     //     rules: [
