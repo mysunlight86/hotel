@@ -1,16 +1,18 @@
 'use strict';
 
+const path = require('path');
+
 // const NODE_ENV = process.env.NODE_ENV || 'development';
 // const webpack = require('webpack');
 
 module.exports = {
     // mode: NODE_ENV,
 
-    // entry: './home',
-    // output: {
-    //     filename: 'build.js',
-    //     library: 'home'
-    // },
+    entry: './src/index.js',
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist')
+    },
 
     // watch: NODE_ENV === 'development',
 
