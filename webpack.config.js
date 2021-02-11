@@ -2,6 +2,7 @@
 
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const {CleanWebpackPlugin} = require ('clean-webpack-plugin');
 
 // const NODE_ENV = process.env.NODE_ENV || 'development';
 // const webpack = require('webpack');
@@ -21,7 +22,8 @@ module.exports = {
         new HTMLWebpackPlugin({
             title: 'test',
             template: './src/index.html'
-        })
+        }),
+        new CleanWebpackPlugin()
     ],
 
     // watch: NODE_ENV === 'development',
