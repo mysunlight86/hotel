@@ -26,6 +26,19 @@ module.exports = {
         }),
         new CleanWebpackPlugin()
     ],
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            },
+            {
+                // test: /\.js$/,
+                // exclude: /node_modules/,
+                // use: ['babel-loader'],
+            }
+        ],
+    }
 
     // watch: NODE_ENV === 'development',
 
@@ -34,14 +47,4 @@ module.exports = {
     // },
 
     // devtool: NODE_ENV === 'development' ? 'inline-cheap-module-source-map' : undefined,
-
-    // module: {
-    //     rules: [
-    //         {
-    //             test: /\.js$/,
-    //             exclude: /node_modules/,
-    //             use: ['babel-loader'],
-    //         },
-    //     ],
-    // }
 };
