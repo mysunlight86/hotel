@@ -33,6 +33,10 @@ module.exports = {
                 use: ['style-loader', 'css-loader']
             },
             {
+                test: /\.(png|jpg|svg|gif)$/,
+                use: ['file-loader']
+            },
+            {
                 // test: /\.js$/,
                 // exclude: /node_modules/,
                 // use: ['babel-loader'],
