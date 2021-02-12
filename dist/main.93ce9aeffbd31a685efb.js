@@ -60,13 +60,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./assets/json.json":
+/*!**************************!*\
+  !*** ./assets/json.json ***!
+  \**************************/
+/***/ ((module) => {
+
+eval("module.exports = JSON.parse(\"{\\\"title\\\":\\\"I am JSON title\\\"}\");\n\n//# sourceURL=webpack:///./assets/json.json?");
+
+/***/ }),
+
 /***/ "./index.js":
 /*!******************!*\
   !*** ./index.js ***!
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./Post.js\");\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/styles.css */ \"./styles/styles.css\");\n\n\n\n\n\nconst post = new _Post__WEBPACK_IMPORTED_MODULE_0__.default('Временный пост');\n\nconsole.log('Пост в строку: ', post.toString());\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./Post.js\");\n/* harmony import */ var _assets_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/json */ \"./assets/json.json\");\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/styles.css */ \"./styles/styles.css\");\n\n\n\n\n\n\nconst post = new _Post__WEBPACK_IMPORTED_MODULE_0__.default('Временный пост');\n\nconsole.log('Пост в строку: ', post.toString());\n\nconsole.log('JSON: ', _assets_json__WEBPACK_IMPORTED_MODULE_1__);\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 
