@@ -12,6 +12,6 @@ export default class Post {
             title: this.title,
             date: this.date,
             img: this.img
-        });
+        }, null, 2);
     }
 };
