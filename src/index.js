@@ -8,7 +8,7 @@ import './styles/styles.css';
 
 const post = new Post('Временный пост', webpackLogo);
 
-$('pre').html(post.toString());
+$('pre').addClass('code').html(post.toString());
 
 console.log('Пост в строку: ', post.toString());
 
