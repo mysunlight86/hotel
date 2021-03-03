@@ -5,9 +5,13 @@
 * Project deployment
 * Technologies
 
+---
+
 ### Intro
 
 Project for page layout for finding hotel rooms. The source codes of the project are stored in the `src` directory. The finished project is going to the `dist` folder. 
+
+---
 
 ### Project deployment
 
@@ -31,6 +35,8 @@ Project for page layout for finding hotel rooms. The source codes of the project
 
 ```npm run build```
 
+---
+
 ### Technologies
 1. [webpack](http://webpack.github.io/)
     * webpack &mdash; collector of modules and resources
@@ -44,6 +50,8 @@ Project for page layout for finding hotel rooms. The source codes of the project
     * copy-webpack-plugin &mdash; сopies individual files or entire directories, which already exist, to the build directory.
     * mini-css-extract-plugin &mdash; extracts CSS into separate files. It creates a CSS file per JS file which contains CSS.
     * css-minimizer-webpack-plugin &mdash; uses cssnano to optimize and minify CSS files
+    * node-sass &mdash; a package that compiles Sass to CSS
+    * sass-loader &mdash; downloads SCSS and compiles it to CSS
 2. [babel](https://babeljs.io/)
     * babel-loader &mdash; transpiling files with Babel and webpack
     * @babel/core &mdash; transpiling ES2015 + to backward compatible JavaScript

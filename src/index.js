@@ -5,6 +5,7 @@ import Post from '@models/Post.js';
 import json from './assets/json.json';
 import webpackLogo from './assets/webpack-logo.png';
 import './styles/styles.css';
+import './styles/style.scss';
 
 const post = new Post('Временный пост', webpackLogo);
 
