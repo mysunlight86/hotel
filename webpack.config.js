@@ -9,6 +9,10 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 // const NODE_ENV = process.env.NODE_ENV || 'development';
 // const webpack = require('webpack');
+const isDev = process.env.NODE_ENV === 'development';
+// console.log('IS DEV: ', isDev);
+
+const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -19,8 +23,9 @@ module.exports = {
         analytics: './analytics.js'
     },
     output: {
-        filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, 'dist')
+        filename: filename('js'),
+        path: path.resolve(__dirname, 'dist'),
+        assetModuleFilename: 'assets/[name][ext]'
     },
     resolve: {
         alias: {
@@ -52,14 +57,17 @@ module.exports = {
             patterns: [
                 {
                     from: path.resolve(__dirname, 'src/favicon.ico'),
-                    to: path.resolve(__dirname, 'dist')
+                    to: path.resolve(__dirname, 'dist/assets')
                 }
             ]
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css'
+            filename: filename('css')
         })
     ],
+    experiments: {
+        asset: true
+    },
     module: {
         rules: [
             {
@@ -87,12 +95,34 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpg|svg|gif)$/,
-                use: ['file-loader']
+                test: /\.(png|jpg|gif|jpeg)$/i,
+                type: 'asset/resource',
+                // use: ['file-loader'],
+                generator: {
+                    filename: 'images/[name][ext]'
+                }
+            },
+            // {
+            //     test: /\.ico$/i,
+            //     type: 'asset/source',
+            //     generator: {
+            //         filename: 'assets/[name][ext]'
+            //     }
+            // },
+            {
+                test: /\.svg/,
+                type: 'asset/resource',
+                use: ['svgo-loader'],
+                generator: {
+                    filename: 'images/[name][ext]'
+                }
             },
             {
-                test: /\.(ttf|woff|woff2|eot)$/,
-                use: ['file-loader']
+                test: /\.(ttf|woff|woff2|eot|otf)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name][ext]'
+                }
             },
             {
                 // test: /\.js$/,

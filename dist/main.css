@@ -350,7 +350,7 @@ template {
 
 @font-face {
     font-family: 'Roboto';
-    src: url(03523cf578d69fa923226ff457b92d90.ttf) format('truetype');
+    src: url(fonts/Roboto-Regular.ttf) format('truetype');
   }
   
 body {
@@ -368,7 +368,7 @@ h1 {
 }
 
 .logo {
-    background-image: url(47692505d122dbcae490be2492a60b2e.png);
+    background-image: url(images/webpack-logo.png);
     background-size: cover;
     height: 200px;
     width: 200px;

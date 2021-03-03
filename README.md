@@ -44,12 +44,13 @@ Project for page layout for finding hotel rooms. The source codes of the project
     * webpack-dev-server &mdash; a development server
     * html-webpack-plugin &mdash; creates an HTML file based on a template
     * clean-webpack-plugin &mdash; cleans up the dist directory every time the project is built. This allows you to automatically delete old files that are no longer needed.
-    * file-loader &mdash; to emit a file into the output directory
+    <!-- * file-loader &mdash; to emit a file into the output directory -->
     * css-loader &mdash; loading styles for the main JS file containing the CSS import
     * style-loader &mdash; applying styles to DOM elements via the style element
     * copy-webpack-plugin &mdash; сopies individual files or entire directories, which already exist, to the build directory.
     * mini-css-extract-plugin &mdash; extracts CSS into separate files. It creates a CSS file per JS file which contains CSS.
     * css-minimizer-webpack-plugin &mdash; uses cssnano to optimize and minify CSS files
+    * cross-env &mdash; run scripts that set and use environment variables across platforms
     * node-sass &mdash; a package that compiles Sass to CSS
     * sass-loader &mdash; downloads SCSS and compiles it to CSS
 2. [babel](https://babeljs.io/)

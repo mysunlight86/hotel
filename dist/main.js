@@ -10,16 +10,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./assets/webpack-logo.png":
-/*!*********************************!*\
-  !*** ./assets/webpack-logo.png ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"47692505d122dbcae490be2492a60b2e.png\");\n\n//# sourceURL=webpack:///./assets/webpack-logo.png?");
-
-/***/ }),
-
 /***/ "./styles/styles.css":
 /*!***************************!*\
   !*** ./styles/styles.css ***!
@@ -50,13 +40,23 @@ eval("module.exports = JSON.parse(\"{\\\"title\\\":\\\"I am JSON title\\\"}\");\
 
 /***/ }),
 
+/***/ "./assets/webpack-logo.png":
+/*!*********************************!*\
+  !*** ./assets/webpack-logo.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"images/webpack-logo.png\";\n\n//# sourceURL=webpack:///./assets/webpack-logo.png?");
+
+/***/ }),
+
 /***/ "./index.js":
 /*!******************!*\
   !*** ./index.js ***!
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _models_Post_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @models/Post.js */ \"./models/Post.js\");\n/* harmony import */ var _assets_json_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/json.json */ \"./assets/json.json\");\n/* harmony import */ var _assets_webpack_logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/webpack-logo.png */ \"./assets/webpack-logo.png\");\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/styles.css */ \"./styles/styles.css\");\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/style.scss */ \"./styles/style.scss\");\n\n\n\n\n\n\n\n\n\nconst post = new _models_Post_js__WEBPACK_IMPORTED_MODULE_1__.default('Временный пост', _assets_webpack_logo_png__WEBPACK_IMPORTED_MODULE_3__.default);\n\njquery__WEBPACK_IMPORTED_MODULE_0__('pre').addClass('code').html(post.toString());\n\nconsole.log('Пост в строку: ', post.toString());\n\nconsole.log('JSON: ', _assets_json_json__WEBPACK_IMPORTED_MODULE_2__);\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _models_Post_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @models/Post.js */ \"./models/Post.js\");\n/* harmony import */ var _assets_json_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/json.json */ \"./assets/json.json\");\n/* harmony import */ var _assets_webpack_logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/webpack-logo.png */ \"./assets/webpack-logo.png\");\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/styles.css */ \"./styles/styles.css\");\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/style.scss */ \"./styles/style.scss\");\n\n\n\n\n\n\n\n\n\nconst post = new _models_Post_js__WEBPACK_IMPORTED_MODULE_1__.default('Временный пост', _assets_webpack_logo_png__WEBPACK_IMPORTED_MODULE_3__);\n\njquery__WEBPACK_IMPORTED_MODULE_0__('pre').addClass('code').html(post.toString());\n\nconsole.log('Пост в строку: ', post.toString());\n\nconsole.log('JSON: ', _assets_json_json__WEBPACK_IMPORTED_MODULE_2__);\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
