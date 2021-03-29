@@ -49,18 +49,18 @@ module.exports = {
     devtool: isDev ? 'inline-cheap-module-source-map' : false,
     plugins: [
         new HTMLWebpackPlugin({
-            title: 'test',
+            favicon: './favicon.ico',
             template: './index.html'
         }),
         new CleanWebpackPlugin(),
-        new CopyWebpackPlugin({
-            patterns: [
-                {
-                    from: path.resolve(__dirname, 'src/favicon.ico'),
-                    to: path.resolve(__dirname, 'dist/assets')
-                }
-            ]
-        }),
+        // new CopyWebpackPlugin({
+        //     patterns: [
+        //         {
+        //             from: path.resolve(__dirname, 'src/favicon.ico'),
+        //             to: path.resolve(__dirname, 'dist/assets')
+        //         }
+        //     ]
+        // }),
         new MiniCssExtractPlugin({
             filename: filename('css')
         })
@@ -70,21 +70,28 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: [
+                    MiniCssExtractPlugin.loader, 
                     {
-                        loader: MiniCssExtractPlugin.loader,
-                    }, 
-                    'css-loader']
+                        loader: 'css-loader',
+                        options: { importLoaders: 1 }
+                    },
+                    'postcss-loader']
             },
             {
                 test: /\.s[ac]ss$/i,
                 use: [
+                    MiniCssExtractPlugin.loader,
                     {
-                        loader: MiniCssExtractPlugin.loader,
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 2,
+                        },
                     }, 
-                    'css-loader',
+                    'postcss-loader',
                     'sass-loader'
                 ]
             },
+            
             {
                 test: /\.(png|svg|jpg|gif|jpeg)$/i,
                 type: 'asset/resource',
