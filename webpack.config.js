@@ -7,16 +7,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
-// const NODE_ENV = process.env.NODE_ENV || 'development';
-// const webpack = require('webpack');
 const isDev = process.env.NODE_ENV === 'development';
-// console.log('IS DEV: ', isDev);
 
-const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
+const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
-    // mode: NODE_ENV,
     mode: 'development',
     entry: {
         main: './index.js',
@@ -25,6 +21,7 @@ module.exports = {
     output: {
         filename: filename('js'),
         path: path.resolve(__dirname, 'dist'),
+        publicPath: '',
         assetModuleFilename: 'assets/[name][ext]'
     },
     resolve: {
@@ -37,7 +34,6 @@ module.exports = {
         splitChunks: {
             chunks: 'all'
         },
-        // minimize: true,
         minimizer: [
         // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
         `...`,
@@ -45,8 +41,12 @@ module.exports = {
         ]
     },
     devServer: {
-        port: 4200
+        contentBase: path.resolve(__dirname, './dist'),
+        compress: true,
+        port: 4200,
+        open: true
     },
+    devtool: isDev ? 'inline-cheap-module-source-map' : false,
     plugins: [
         new HTMLWebpackPlugin({
             title: 'test',
@@ -65,78 +65,45 @@ module.exports = {
             filename: filename('css')
         })
     ],
-    experiments: {
-        asset: true
-    },
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.css$/i,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            publicPath: '',
-                        },
                     }, 
                     'css-loader']
             },
             {
-                test: /\.s[ac]ss$/,
+                test: /\.s[ac]ss$/i,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            publicPath: '',
-                        },
                     }, 
                     'css-loader',
                     'sass-loader'
                 ]
             },
             {
-                test: /\.(png|jpg|gif|jpeg)$/i,
+                test: /\.(png|svg|jpg|gif|jpeg)$/i,
                 type: 'asset/resource',
-                // use: ['file-loader'],
-                generator: {
-                    filename: 'images/[name][ext]'
-                }
-            },
-            // {
-            //     test: /\.ico$/i,
-            //     type: 'asset/source',
-            //     generator: {
-            //         filename: 'assets/[name][ext]'
-            //     }
-            // },
-            {
-                test: /\.svg/,
-                type: 'asset/resource',
-                use: ['svgo-loader'],
                 generator: {
                     filename: 'images/[name][ext]'
                 }
             },
             {
-                test: /\.(ttf|woff|woff2|eot|otf)$/i,
+                test: /\.(ttf|woff(2)?|eot|otf)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: 'fonts/[name][ext]'
                 }
             },
             {
-                // test: /\.js$/,
-                // exclude: /node_modules/,
-                // use: ['babel-loader'],
+                test: /\.js$/i,
+                exclude: /node_modules/,
+                use: 'babel-loader',
             }
         ],
     }
-
-    // watch: NODE_ENV === 'development',
-
-    // watchOptions: {
-    //     aggregateTimeout: 100
-    // },
-
-    // devtool: NODE_ENV === 'development' ? 'inline-cheap-module-source-map' : undefined,
 };

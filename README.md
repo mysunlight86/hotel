@@ -23,15 +23,11 @@ Project for page layout for finding hotel rooms. The source codes of the project
 
 ```npm run dev```
 
-**To run a project in development mode with tracking changes in files**
-
-```npm run watch```
-
 **To run a project in development mode with a web server running on port 4200**
 
 ```npm run start```
 
-**To collect files in a project**
+**To collect files in a project (in production mode)**
 
 ```npm run build```
 
@@ -57,7 +53,7 @@ Project for page layout for finding hotel rooms. The source codes of the project
     * babel-loader &mdash; transpiling files with Babel and webpack
     * @babel/core &mdash; transpiling ES2015 + to backward compatible JavaScript
     * @babel/preset-env &mdash; useful Babel default settings
-    * @babel/plugin-proposal-class-properties &mdash; example of custom Babel configuration (setting instance properties in the body of the class, not in its constructor)
+    * core-js &mdash; Modular standard library for JavaScript. Includes polyfills for ECMAScript up to 2021: promises, symbols, collections, iterators, typed arrays, many other features, ECMAScript proposals, some cross-platform WHATWG / W3C features and proposals like URL. You can load only required features or use it without global namespace pollution.
 3. [normalize.css](https://necolas.github.io/normalize.css/)
     * Normalize.css makes browsers render all elements more consistently and in line with modern standards.
 4. [jquery](https://jquery.com/)
