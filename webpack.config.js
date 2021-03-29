@@ -26,7 +26,7 @@ module.exports = {
     },
     resolve: {
         alias: {
-            '@models': path.resolve(__dirname, 'src/models'),
+            '@components': path.resolve(__dirname, 'src/components'),
             '@': path.resolve(__dirname, 'src')
         }
     },
@@ -43,8 +43,7 @@ module.exports = {
     devServer: {
         contentBase: path.resolve(__dirname, './dist'),
         compress: true,
-        port: 4200,
-        open: true
+        port: 4200
     },
     devtool: isDev ? 'inline-cheap-module-source-map' : false,
     plugins: [

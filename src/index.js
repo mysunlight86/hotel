@@ -1,7 +1,7 @@
 'use strict';
 
 import * as $ from 'jquery';
-import Post from '@models/Post.js';
+import Post from '@components/Post.js';
 import json from './assets/json.json';
 import webpackLogo from './assets/webpack-logo.png';
 import './styles/styles.css';

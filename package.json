@@ -2,11 +2,11 @@
   "name": "hotel",
   "version": "0.0.1",
   "description": "Project for page layout for finding hotel rooms",
-  "main": "home.js",
+  "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode=development",
     "build": "cross-env NODE_ENV=production webpack --mode=production",
-    "start": "cross-env NODE_ENV=development webpack serve --mode=development"
+    "start": "cross-env NODE_ENV=development webpack serve --mode=development --open"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
     "webpack"
   ],
   "author": "Nadezhda Malokhatko <mysunlight86@gmail.com>",
-  "license": "ISC",
+  "license": "",
   "bugs": {
     "url": "https://github.com/mysunlight86/hotel/issues"
   },
