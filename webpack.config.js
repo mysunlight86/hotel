@@ -1,5 +1,3 @@
-'use strict';
-
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require ('clean-webpack-plugin');
@@ -43,7 +41,12 @@ module.exports = {
     devServer: {
         contentBase: path.resolve(__dirname, './dist'),
         compress: true,
-        port: 4200
+        port: 4200,
+        watchContentBase: true,
+        overlay: {
+            warnings: true,
+            errors: true,
+        },
     },
     devtool: isDev ? 'inline-cheap-module-source-map' : false,
     plugins: [

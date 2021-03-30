@@ -1,5 +1,3 @@
-'use strict';
-
 import * as $ from 'jquery';
 import Post from '@components/Post.js';
 import json from './assets/json.json';
