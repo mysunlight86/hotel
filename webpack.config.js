@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const fs = require('fs');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require ('clean-webpack-plugin');
@@ -59,25 +60,20 @@ module.exports = {
     },
     devtool: isDev ? 'inline-cheap-module-source-map' : false,
     plugins: [
-        // new HTMLWebpackPlugin({
-        //     favicon: './favicon.ico',
-        //     template: './pages/index.html',
-        // }),
         new CleanWebpackPlugin(),
-        // new CopyWebpackPlugin({
-        //     patterns: [
-        //         {
-        //             from: path.resolve(__dirname, 'src/favicon.ico'),
-        //             to: path.resolve(__dirname, 'dist/assets'),
-        //         }
-        //     ]
-        // }),
         new MiniCssExtractPlugin({
             filename: filename('css'),
         }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery':'jquery',
+            'window.$': 'jquery'
+          }),
         ...PAGES.map(page => new HTMLWebpackPlugin({
             template: `${PAGES_DIR}/${page}`,
-            filename: `./${page.replace(/\.pug/,'.html')}`
+            filename: `./${page.replace(/\.pug/,'.html')}`,
+            favicon: './favicon.ico',
         })),
     ],
     module: {

@@ -1,3 +1,4 @@
+include ./mixins
 block variables
 
 doctype html
@@ -10,5 +11,8 @@ html(lang='ru')
         meta(name="author", content="Надежда Малохатько")
         link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Quicksand:400,700&display=swap&subset=cyrillic" rel="stylesheet")
         link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
-        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         block head
+    
+    body
+        .wrapper
+            block content
