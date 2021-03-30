@@ -56,7 +56,9 @@ Project for page layout for finding hotel rooms. The source codes of the project
     * autoprefixer &mdash; postCSS plugin to parse CSS and add vendor prefixes to CSS rules using values from Can I Use.
     * node-sass &mdash; a package that compiles Sass to CSS
     * sass-loader &mdash; downloads SCSS and compiles it to CSS
-4. [normalize.css](https://necolas.github.io/normalize.css/)
+4. [pug](https://pugjs.org/api/getting-started.html)
+    * pug-loader &mdash; loads Pug and Jade templates and returns a function
+5. [normalize.css](https://necolas.github.io/normalize.css/)
     * Normalize.css makes browsers render all elements more consistently and in line with modern standards.
-5. [jquery](https://jquery.com/)
+6. [jquery](https://jquery.com/)
     * jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
