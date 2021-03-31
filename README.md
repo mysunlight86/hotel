@@ -58,6 +58,7 @@ Project for page layout for finding hotel rooms. The source codes of the project
     * node-sass &mdash; a package that compiles Sass to CSS
     * sass-loader &mdash; downloads SCSS and compiles it to CSS
 4. [pug](https://pugjs.org/api/getting-started.html)
+    * pug &mdash; The general rendering process of Pug is simple. pug.compile() will compile the Pug source code into a JavaScript function that takes a data object (called “locals”) as an argument. Call that resultant function with your data, and voilà!, it will return a string of HTML rendered with your data.
     * pug-loader &mdash; loads Pug and Jade templates and returns a function
 5. [jquery](https://jquery.com/)
     * jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
