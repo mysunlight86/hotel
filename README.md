@@ -42,6 +42,7 @@ Project for page layout for finding hotel rooms. The source codes of the project
     * clean-webpack-plugin &mdash; cleans up the dist directory every time the project is built. This allows you to automatically delete old files that are no longer needed.
     * copy-webpack-plugin &mdash; сopies individual files or entire directories, which already exist, to the build directory.
     * cross-env &mdash; run scripts that set and use environment variables across platforms
+    * ProvidePlugin &mdash; Automatically load modules instead of having to import or require them everywhere.
 2. [babel](https://babeljs.io/)
     * babel-loader &mdash; transpiling files with Babel and webpack
     * @babel/core &mdash; transpiling ES2015 + to backward compatible JavaScript
@@ -58,7 +59,5 @@ Project for page layout for finding hotel rooms. The source codes of the project
     * sass-loader &mdash; downloads SCSS and compiles it to CSS
 4. [pug](https://pugjs.org/api/getting-started.html)
     * pug-loader &mdash; loads Pug and Jade templates and returns a function
-5. [normalize.css](https://necolas.github.io/normalize.css/)
-    * Normalize.css makes browsers render all elements more consistently and in line with modern standards.
-6. [jquery](https://jquery.com/)
+5. [jquery](https://jquery.com/)
     * jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.

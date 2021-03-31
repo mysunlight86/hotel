@@ -14,5 +14,9 @@ html(lang='ru')
         block head
     
     body
-        .wrapper
-            block content
+        .page
+            header.header
+                +logo()
+            
+            main.content
+                block content

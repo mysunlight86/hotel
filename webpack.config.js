@@ -23,8 +23,7 @@ module.exports = {
     context: PATHS.src,
     mode: 'development',
     entry: {
-        main: './pages/index.js',
-        analytics: './pages/analytics.js',
+        main: './index.js',
     },
     output: {
         filename: filename('js'),
@@ -104,14 +103,14 @@ module.exports = {
             },
             
             {
-                test: /\.(png|svg|jpg|gif|jpeg)$/i,
+                test: /\.(png|jpg|gif|jpeg)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: 'images/[name][ext]',
                 }
             },
             {
-                test: /\.(ttf|woff(2)?|eot|otf)$/i,
+                test: /\.(ttf|woff(2)?|eot|otf|svg)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: 'fonts/[name][ext]',
@@ -124,7 +123,6 @@ module.exports = {
             },
             {
                 test: /\.pug$/i,
-                // exclude: /node_modules/,
                 use: 'pug-loader',
             },
         ],
