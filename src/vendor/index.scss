@@ -1,6 +1,7 @@
 @import "./normalize.css";
-@import "./fonts/fonts";
+@import "./fonts/fonts.scss";
 @import "./vars";
+@import "../pages/colors-and-type.scss";
 
 html {
     line-height: $main-line-height;
@@ -15,9 +16,8 @@ html {
     margin: 0 auto;
 }
 
-h1,
-h2 {
-    font-family: $heading-font;
+.logo-icon {
+    margin: 2%;
 }
 
 h1,
@@ -32,12 +32,12 @@ h3 {
 
 h1 {
     font-size: (24px / $main-font-size) * 1rem;
-    line-height: (30px / $main-font-size) * 1rem;
+    line-height: (29px / $main-font-size) * 1rem;
 }
 
 h2 {
     font-size: (19px / $main-font-size) * 1rem;
-    line-height: (24px/14px) * 1rem;
+    line-height: (23px / $main-font-size) * 1rem;
     letter-spacing: 0.5px;
 }
 
