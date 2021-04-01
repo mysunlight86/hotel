@@ -4,16 +4,17 @@
 @import "../pages/colors-and-type.scss";
 
 html {
-    line-height: $main-line-height;
     font-size: $main-font-size;
-    color: $dark-shade-75;
-    font-family: $main-font;
 }
 
 .page {
     min-width: $sm-phone-width;
     max-width: $lg-desktop-width;
     margin: 0 auto;
+    line-height: $main-line-height;
+    font-size: $main-font-size;
+    color: $dark-shade-75;
+    font-family: $main-font;
 }
 
 .logo-icon {

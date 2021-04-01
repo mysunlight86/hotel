@@ -1,13 +1,24 @@
 @import "./../components/color-block/color-block";
+@import "./../components/tag-block/tag-block";
 
 .two-columns {
     max-width: (1132px/1440px)*100%;
     margin-left: (150px/1440px)*100%;
     margin-right: (158px/1440px)*100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .two-columns__column-colors {
     max-width: 290px;
     display: grid;
     grid-row-gap: (20px/$main-font-size)*1rem;
+}
+
+.two-columns__column-type {
+    max-width: 436px;
+    align-self: start;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: (50px/$main-font-size)*1rem (30px/$main-font-size)*1rem;
 }

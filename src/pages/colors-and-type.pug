@@ -20,4 +20,9 @@ block content
             +color-row({className: 'block_green', title: 'Green', name: '#6FCF97'})
 
         .two-columns__column-type
+            include ../components/tag-block/tag-block
+            +tag-block({tagName: 'h1', tagText: 'H1', text: 'This one is the sub-section or widget title'})
+            +tag-block({tagName: 'h2', tagText: 'H2', text: 'Next one is the item title inside widgets'})
+            +tag-block({tagName: 'h3', tagText: 'H3', text: 'This is a label or CTA text'})
+            +tag-block({tagName: 'p', tagText: 'Body', text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
             
