@@ -8,5 +8,16 @@ block header
     +logo-icon()
 
 block content
-    
+    .two-columns
+        .two-columns__column-colors
+            include ../components/color-block/color-block
+            +color-row({className: 'block_opacity_100', title: 'Dark Shade 100%', name: '#1F2041'})
+            +color-row({className: 'block_opacity_75', title: 'Dark Shade 75%', name: '#1F2041'})
+            +color-row({className: 'block_opacity_50', title: 'Dark Shade 50%', name: '#1F2041'})
+            +color-row({className: 'block_opacity_25', title: 'Dark Shade 25%', name: '#1F2041'})
+            +color-row({className: 'block_opacity_5', title: 'Dark Shade 5%', name: '#1F2041'})
+            +color-row({className: 'block_purple', title: 'Purple', name: '#BC9CFF'})
+            +color-row({className: 'block_green', title: 'Green', name: '#6FCF97'})
+
+        .two-columns__column-type
             

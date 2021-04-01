@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const fs = require('fs');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require ('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
@@ -58,7 +57,6 @@ module.exports = {
         },
     },
     devtool: isDev ? 'inline-cheap-module-source-map' : false,
-    // watch: true,
     watchOptions: {
         ignored: /node_modules/,
     },
