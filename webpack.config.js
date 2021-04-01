@@ -58,6 +58,10 @@ module.exports = {
         },
     },
     devtool: isDev ? 'inline-cheap-module-source-map' : false,
+    // watch: true,
+    watchOptions: {
+        ignored: /node_modules/,
+    },
     plugins: [
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({

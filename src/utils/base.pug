@@ -16,7 +16,10 @@ html(lang='ru')
     body
         .page
             header.header
-                +logo-icon()
+                block header
             
             main.content
                 block content
+
+            footer.footer
+                block footer
