@@ -1,0 +1,46 @@
+.elements__field-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: (5px/$main-font-size)*1rem;
+
+    &_color_light {
+        color: $dark-shade-50;
+        font-weight: normal;
+    }
+}
+
+.elements__text-field {
+    width: 320px;
+    border: 1px solid $dark-shade-25;
+    border-radius: 4px;
+    padding: 9px 10px;
+    color: $dark-shade-75;
+}
+
+.elements__text-field::placeholder {
+    color: $dark-shade-25;
+    line-height: calc(18px/14px);
+}
+
+input.subscription {
+    max-width: 260px;
+}
+
+span.material-icon {
+    position: relative;
+}
+
+input.subscription + span.material-icon:before {
+    content: "\e5c8";
+    font-family: Material Icons;
+    background: $purple-gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    font-size: 24px;
+    top: -10px;
+    right: 11px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}

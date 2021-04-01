@@ -61,3 +61,4 @@ Project for page layout for finding hotel rooms. The source codes of the project
     * pug-loader &mdash; loads Pug and Jade templates and returns a function
 5. [jquery](https://jquery.com/)
     * jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
+    * [jquery.maskedinput](https://github.com/digitalBush/jquery.maskedinput) This is a masked input plugin for the jQuery javascript library. It allows a user to more easily enter fixed width input where you would like them to enter the data in a certain format (dates, phone numbers, etc).

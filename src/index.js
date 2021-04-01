@@ -1,5 +1,3 @@
-import json from './assets/json.json';
+import './components/text-field/maskedinput.js';
 
 import './vendor/index.scss';
-
-console.log('JSON: ', json);

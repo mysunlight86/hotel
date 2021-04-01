@@ -2,6 +2,7 @@
 @import "./fonts/fonts.scss";
 @import "./vars";
 @import "../pages/colors-and-type.scss";
+@import "./../pages/form-elements.scss";
 
 html {
     font-size: $main-font-size;
@@ -18,7 +19,7 @@ html {
 }
 
 .logo-icon {
-    margin: 2%;
+    margin: (30px/1440px)*100%;
 }
 
 h1,

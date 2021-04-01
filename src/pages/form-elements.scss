@@ -1,0 +1,13 @@
+@import "./../components/text-field/text-field";
+
+.elements {
+    margin: 0 auto;
+    max-width: (1440px - 2*140px)/$main-font-size*1rem;
+    margin-top: (35px/$main-font-size)*1rem;
+}
+
+.elements__fields {
+    max-width: 320px;
+    display: grid;
+    grid-gap: (20px/$main-font-size)*1rem;
+}

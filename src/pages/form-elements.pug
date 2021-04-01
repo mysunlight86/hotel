@@ -1,0 +1,49 @@
+extends ./../utils/base
+
+block variables
+    - var title = 'Toxin - uikit (form elements)';
+    - var description = 'Подготовка элементов форм';
+
+block header
+    +logo-icon()
+
+block content
+    .elements
+        .elements__fields
+            include ../components/text-field/text-field
+            +text-field({
+                headerTitle: 'Text Field', 
+                headerSetting: 'Default', 
+                inputType: 'email', 
+                inputPlaceholder: 'Email',
+                subscription: '', 
+                width: '', 
+                dateMasked: '',
+                pattern: '([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})'}) 
+            +text-field({
+                headerTitle: 'Text Field', 
+                headerSetting: 'Hover / Focus', 
+                inputType: 'text',  
+                inputValue: 'This is pretty awesome', 
+                subscription: '', 
+                width: '',
+                dateMasked: ''})
+            +text-field({
+                headerTitle: 'masked text field', 
+                headerSetting: 'Default', 
+                inputType: 'text', 
+                inputPlaceholder: 'ДД.ММ.ГГГГ', 
+                subscription: '', 
+                width: '', 
+                dateMasked: 'date-masked'})
+            +text-field({
+                headerTitle: 'subscription text field', 
+                headerSetting: '', 
+                inputType: 'email', 
+                inputPlaceholder: 'Email', 
+                subscription: 'subscription', 
+                width: 'dropdown-width-medium', 
+                pattern: '([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})'}) 
+        .elements__checkbox-radio-buttons 
+        .elements__toogle-like-rate-buttons 
+        .elements__slider-buttons-pagination
