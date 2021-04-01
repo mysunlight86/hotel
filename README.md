@@ -40,7 +40,6 @@ Project for page layout for finding hotel rooms. The source codes of the project
     * webpack-dev-server &mdash; a development server
     * html-webpack-plugin &mdash; creates an HTML file based on a template
     * clean-webpack-plugin &mdash; cleans up the dist directory every time the project is built. This allows you to automatically delete old files that are no longer needed.
-    * copy-webpack-plugin &mdash; сopies individual files or entire directories, which already exist, to the build directory.
     * cross-env &mdash; run scripts that set and use environment variables across platforms
     * ProvidePlugin &mdash; Automatically load modules instead of having to import or require them everywhere.
 2. [babel](https://babeljs.io/)
