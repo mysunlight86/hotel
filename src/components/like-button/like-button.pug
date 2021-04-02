@@ -1,0 +1,8 @@
+mixin likeButton(options)
+    div
+        label
+            if options.inputChecked
+                input.like-value(type='checkbox' name='like-value' value=options.inputValue checked='')
+            else
+                input.like-value(type='checkbox' name='like-value' value=options.inputValue)
+            .like

@@ -44,6 +44,86 @@ block content
                 subscription: 'subscription', 
                 width: 'dropdown-width-medium', 
                 pattern: '([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})'}) 
+
         .elements__checkbox-radio-buttons 
+            .field-switches
+                h3 Checkbox Buttons
+                .checkbox-fields
+                    include ../components/checkbox/checkbox
+                    +checkbox({inputValue: 'smoke', optionSimple: true, variation: 'Можно курить', inputChecked: false})
+                    +checkbox({inputValue: 'pet', optionSimple: true, variation: 'Можно с питомцами', inputChecked: true})
+                    +checkbox({inputValue: 'invite', optionSimple: true, variation: 'Можно пригласить гостей (до 10 человек)', inputChecked: true})
+            .field-switches
+                .field-switches
+                    h3 Radio Buttons
+                    .radio-fields
+                        include ../components/radio-button/radio-button
+                        +radioButton({inputValue: 'male', variation: 'Мужчина', inputChecked: true})
+                        +radioButton({inputValue: 'female', variation: 'Женщина', inputChecked: false})
+
         .elements__toogle-like-rate-buttons 
+            .field-switches
+                h3 Toggle
+                .toggle-fields
+                    include ../components/toggle/toggle
+                    +toggle({inputValue: 'receive', variation: 'Получать спецпредложения', inputChecked: true})
+                    +toggle({inputValue: 'no-receive', variation: 'Получать спецпредложения', inputChecked: false})
+            .field-switches
+                h3 like button
+                .like-fields
+                    include ../components/like-button/like-button
+                    +likeButton({inputValue: 'no-like', inputChecked: false})
+                    +likeButton({inputValue: 'like', inputChecked: true})
+            .field-switches
+                h3 rate button
+                .star-rating
+                    include ../components/rate-button/rate-button
+                    +rateButton( {starNumber: 5, checkedNumber: 4, ratingNumber: 1} )
+                    +rateButton( {starNumber: 5, checkedNumber: 5, ratingNumber: 2} )
+
         .elements__slider-buttons-pagination
+            .range-slider
+                include ../components/range-slider/range-slider
+                +rangeSlider({headerTitle: 'Range Slider', inputType: 'text', width: 'dropdown-width-medium'})
+            .buttons
+                h3 buttons
+                .field-buttons
+                    .field-buttons__row
+                        include ../components/button/button
+                        +button({fill: 'button_fill-100', styleText: 'button_button-text', buttonWidth: 'button_button-small', buttonValue: 'CLICK ME'})
+                        +button({fill: 'button_fill-50', styleText: 'button_button-text', buttonWidth: 'button_button-small', buttonValue: 'CLICK ME'})
+                    .field-buttons__row
+                        +button({styleText: 'button_button-text', buttonWidth: 'button_button-small', borderStyle: 'button_border-fill-100', buttonValue: 'CLICK ME'})
+                        +button({fill: '', styleText: 'button_button-text', buttonWidth: 'button_button-small', borderStyle: 'button_border-fill-50', buttonValue: 'CLICK ME'})
+                    .field-buttons__row
+                        +button({transparent: 'button_button-transparent', buttonWidth: 'button_button-small', buttonStatus: 'button_color-active', styleText: 'button_button-text', buttonValue: 'CLICK ME'})
+                        +button({transparent: 'button_button-transparent', buttonWidth: 'button_button-small', buttonStatus: 'button_color-passive', styleText: 'button_button-text', buttonValue: 'CLICK ME'})
+                    .field-buttons__row
+                        +button({buttonWidth: 'button_button-big', fill: 'button_fill-100', styleText: 'button_button-text', buttonValue: 'перейти к оплате'})
+            .pagination
+                h3 pagination
+                include ../components/pagination/pagination
+    
+    .list-checkbox
+        .checkbox-list
+            include ../components/expandable-checkbox-list/expandable-checkbox-list
+            +details({detailsOpen: false, summaryText: 'expandable checkbox list'})
+            +details({detailsOpen: true, summaryText: 'expandable checkbox list'})
+                .checkbox-fields
+                    +checkbox({inputValue: 'breakfast', optionSimple: true, variation: 'Завтрак', inputChecked: false})
+                    +checkbox({inputValue: 'desk', optionSimple: true, variation: 'Письменный стол', inputChecked: true})
+                    +checkbox({inputValue: 'highchair', optionSimple: true, variation: 'Стул для кормления', inputChecked: true})
+                    +checkbox({inputValue: 'cot', optionSimple: true, variation: 'Кроватка', inputChecked: true})
+                    +checkbox({inputValue: 'TV', optionSimple: true, variation: 'Телевизор', inputChecked: false})
+                    +checkbox({inputValue: 'shampoo', optionSimple: true, variation: 'Шампунь', inputChecked: false})
+                    +checkbox({inputValue: 'TV', optionSimple: true, variation: 'Телевизор', inputChecked: false})
+                    +checkbox({inputValue: 'shampoo', optionSimple: true, variation: 'Шампунь', inputChecked: false})
+        .rich-checkbox
+            h3 Rich Checkbox Buttons
+            .checkbox-fields
+                +checkbox({inputValue: 'wide corridor', optionSimple: false, richData: {title: 'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.'}, inputChecked: false})
+                +checkbox({inputValue: 'assistant', optionSimple: false, richData: {title: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист и проводит до номера.'}, inputChecked: false})
+        .list-checkbox__bullet-list
+            h3 bullet list
+            include ../components/bullet-list/bullet-list
+            +bulletList({items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})

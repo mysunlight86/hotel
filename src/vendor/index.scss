@@ -47,3 +47,25 @@ h3 {
     font-size: (12px / $main-font-size) * 1rem;
     line-height: (15px / $main-font-size) * 1rem;
 }
+
+.dropdown-width-small {
+    width: $sm-dropdown-width;
+}
+
+.dropdown-width-medium {
+    width: $md-dropdown-width;
+}
+
+.dropdown-width-large {
+    width: $lg-dropdown-width;
+}
+
+.material-icon {
+    line-height: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.material-icons.md-dark-50 {
+    color: $dark-shade-50;
+}

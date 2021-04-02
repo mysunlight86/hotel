@@ -46,6 +46,6 @@
   },
   "dependencies": {
     "core-js": "^3.9.1",
-    "jquery": "^3.5.1"
+    "webpack-jquery-ui": "^2.0.1"
   }
 }

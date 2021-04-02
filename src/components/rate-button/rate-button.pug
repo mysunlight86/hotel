@@ -1,0 +1,9 @@
+mixin rateButton(options)
+    .star-rating__wrap
+        - for (var i=options.starNumber; i>=1; i--) {
+            if i === options.checkedNumber
+                input.star-rating__input(id='star-rating-' + options.ratingNumber + i, type='radio' name='rating' + options.ratingNumber, value=i, checked='')
+            else
+                input.star-rating__input(id='star-rating-' + options.ratingNumber + i, type='radio' name='rating' + options.ratingNumber, value=i)
+            label.star-rating__ico(for='star-rating-' + options.ratingNumber + i)
+        - }

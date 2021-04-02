@@ -1,0 +1,52 @@
+.toggle-fields {
+    margin-top: (16px/$main-font-size)*1rem;
+
+    div {
+        margin-bottom: (10px/$main-font-size)*1rem;
+    }
+
+    label {
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        line-height: (24px/$main-font-size)*1rem;;
+
+        > span {
+            display: inline-block;
+            line-height: (24px/$main-font-size)*1rem;
+            margin-left: (50px/$main-font-size)*1rem;
+            color: $dark-shade-75;
+        }
+    }
+}
+
+.toggle {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border: 1px solid $dark-shade-25;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: absolute;
+
+    &:before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 10px;
+        background: $dark-shade-25;
+        position: absolute;
+        left: 3px;
+        top: 3px;
+    }
+}
+
+input[name="toggle-value"]:checked + .toggle {
+    border: 1px solid $purple;
+
+    &:before {
+        background: $purple-gradient;
+        left: 23px;
+    }
+}

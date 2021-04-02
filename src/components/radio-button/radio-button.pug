@@ -1,0 +1,8 @@
+mixin radioButton(options)
+    div
+        label
+            if options.inputChecked
+                input(type='radio' name='radio-value' value=options.inputValue checked='')
+            else
+                input(type='radio' name='radio-value' value=options.inputValue)
+            span #{options.variation}

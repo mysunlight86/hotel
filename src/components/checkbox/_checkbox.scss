@@ -1,0 +1,65 @@
+.checkbox-fields {
+    div {
+        max-width: 260px;
+    }
+
+    label {
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        line-height: (18px / $main-font-size) * 1rem;
+    
+        & > div {
+            display: inline-block;
+            line-height: (18px / $main-font-size) * 1rem;
+            margin-left: (30px / $main-font-size) * 1rem;
+            color: $dark-shade-50;
+            margin-bottom: (11px / $main-font-size) * 1rem;
+        }
+        
+    }
+} 
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[name="checkbox-value"] + div:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid $dark-shade-25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+input[name="checkbox-value"]:checked + div:after {
+    content: "";
+    width: 6px;
+    height: 8px;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-image: $purple-gradient;
+    border-image-slice: 1;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 7px;
+    top: 4px;
+}
+
+h3.title-checkbox {
+    font-size: (14px / $main-font-size) * 1rem;
+    line-height: (18px / $main-font-size) * 1rem;
+    color: $dark-shade-75;
+    text-transform: none;
+}
+
+p.description-checkbox {
+    font-size: (12px / $main-font-size) * 1rem;
+    line-height: (14px / $main-font-size) * 1rem;
+    color: $dark-shade-50;
+    margin-top: 5px;
+}

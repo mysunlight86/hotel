@@ -6,6 +6,7 @@ $dark-shade-5: rgba(31, 32, 65, 0.05);
 $purple: rgba(188, 156, 255, 1);
 $green: rgba(111, 207, 151, 1);
 $purple-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$green-gradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
 // Font
 $main-font: 'Montserrat', Arial, sans-serif;
@@ -20,3 +21,11 @@ $sm-desktop-width: 980px;
 $table-width: 768px;
 $phone-width: 480px;
 $sm-phone-width: 320px;
+
+$lg-column-width: 320px;
+$md-column-width: 260px;
+$sm-column-width: 200px;
+
+$lg-dropdown-width: 320px;
+$md-dropdown-width: 266px;
+$sm-dropdown-width: 150px;

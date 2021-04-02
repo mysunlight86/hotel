@@ -1,0 +1,35 @@
+.block-checkbox {
+    margin-top: 173px;
+}
+
+summary {
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.summary_open {
+    margin-top: 49px;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary:after {
+    content: "\e5cf";
+    padding-left: 24px;
+    top: 7px;
+    position: relative;
+    font-family: Material Icons;
+    font-size: 24px;
+    line-height: 24px;
+    color: $dark-shade-50;
+}
+
+details[open] > summary:after {
+    content: "\e5ce";
+    @extend summary:after;
+}
