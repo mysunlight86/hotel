@@ -63,3 +63,4 @@ Project for page layout for finding hotel rooms. The source codes of the project
     * jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
     * [jquery.maskedinput](https://github.com/digitalBush/jquery.maskedinput) This is a masked input plugin for the jQuery javascript library. It allows a user to more easily enter fixed width input where you would like them to enter the data in a certain format (dates, phone numbers, etc).
     * [webpack-jquery-ui](https://www.npmjs.com/package/webpack-jquery-ui) &mdash; This one package will let you use jquery and jquery-ui (v.1.12.1, for jQuery1.7+) in your project.
+    * [item-quantity-dropdown jQuery plugin](https://www.npmjs.com/package/item-quantity-dropdown) &mdash; Dropdown menu to select items with quantities.

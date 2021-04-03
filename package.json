@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "core-js": "^3.9.1",
+    "i18n-js": "^3.8.0",
     "webpack-jquery-ui": "^2.0.1"
   }
 }

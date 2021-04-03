@@ -1,0 +1,127 @@
+.iqdropdown {
+    height: 44px;
+    padding: 10px 13px;
+    position: relative;
+    background: #ffffff;
+    border: 1px solid $dark-shade-25;
+    box-sizing: border-box;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &-content {
+        min-width: 82px;
+    }
+
+    p.iqdropdown-selection {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: $dark-shade-75;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 160px;
+        text-overflow: ellipsis;
+
+        &:after {
+            content: "\e5cf";
+            font-family: Material Icons;
+            color: $dark-shade-50;
+            position: absolute;
+            right: 12px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    }
+
+    .iqdropdown-menu {
+        display: none;
+        box-sizing: border-box;
+        border: 1px solid $dark-shade-50;
+        margin-top: 8px;
+        margin-left: -14px;
+        padding-left: 8px;
+        background-color: #fff;
+        z-index: 3;
+        position: relative;
+    }
+
+    &.menu-open {
+        border: 1px solid $dark-shade-50;
+
+        p.iqdropdown-selection:after {
+            content: "\e5ce";
+        }
+
+        & .iqdropdown-menu {
+            display: block;
+        }
+    }
+}
+
+.iqdropdown-menu-option {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 7px 6px 5px;
+    align-items: center;
+}
+
+p.iqdropdown-item,
+span.counter {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+}
+
+span.counter {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+}
+
+.button-decrement,
+.button-increment {
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $dark-shade-25;
+    border-radius: 22px;
+    margin: 1px 1px 0px 1px;
+    cursor: pointer;
+}
+
+.icon-decrement,
+.icon-increment {
+    font-size: 18px;
+    line-height: 22px;
+    color: $dark-shade-50;
+}
+
+.iqdropdown-menu-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 15px 7px 12px 4px;
+    cursor: pointer;
+
+    button {
+        padding: 0;
+    }
+}
+
+.iqdropdown-menu-reset {
+    @extend span.counter;
+    background-color: #fff;
+    color: $dark-shade-50;
+}
+
+.iqdropdown-menu-apply {
+    @extend span.counter;
+    color: $purple;
+}
+
+.conveniences .iqdropdown-menu-buttons {
+    display: none;
+}

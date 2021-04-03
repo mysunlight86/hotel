@@ -9,6 +9,7 @@
 @import "./../components/pagination/pagination";
 @import "./../components/expandable-checkbox-list/expandable-checkbox-list";
 @import "./../components/bullet-list/bullet-list";
+@import "./../components/dropdown/dropdown";
 
 .elements {
     margin: 0 auto;
@@ -78,23 +79,39 @@
     }
 }
 
+.dropdowns {
+    display: flex;
+    margin: 0 auto;
+    max-width: (1440px - 2*140px)/$main-font-size*1rem;
+}
+
+.dropdowns__column_type_conveniences {
+    margin-right: (181px/$main-font-size)*1rem;
+    display: grid;
+    grid-gap: (20px/$main-font-size)*1rem;
+}
+
+.dropdowns__column_type_empty-visitors {
+    margin-right: (72px/$main-font-size)*1rem;
+}
+
 .list-checkbox {
     margin: 0 auto;
     max-width: (1440px - 2*140px)/$main-font-size*1rem;
-    margin-top: (55px/$main-font-size)*1rem;
+    margin-top: ((55px+118px)/$main-font-size)*1rem;
     display: flex;
 }
 
 .checkbox-list {
-    max-width: $md-dropdown-width;
+    width: ($md-dropdown-width/$main-font-size)*1rem;
     margin-right: (181px/$main-font-size)*1rem;
 }
 
 .rich-checkbox {
-    max-width: $md-dropdown-width;
+    width: ($md-dropdown-width/$main-font-size)*1rem;
     margin-right: (126px/$main-font-size)*1rem;
 }
 
 .list-checkbox__bullet-list {
-    max-width: (240px/$main-font-size)*1rem;
+    max-width: ($md-column-width/$main-font-size)*1rem;
 }

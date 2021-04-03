@@ -28,6 +28,17 @@ block content
                 subscription: '', 
                 width: '',
                 dateMasked: ''})
+            include ../components/dropdown/dropdown
+            +dropdown({
+                headerTitle: 'Dropdown', 
+                headerSetting: 'Default', 
+                classDropdown: 'visitors', 
+                menuOpen: '', 
+                widthSize: 'dropdown-width-large', 
+                dataItem: [
+                    {optionId: 'adult', defaultcount: '0', mincount: '1', itemText: 'взрослые'}, 
+                    {optionId: 'minor', defaultcount: '0', mincount: '0', itemText: 'дети'}, 
+                    {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}]})
             +text-field({
                 headerTitle: 'masked text field', 
                 headerSetting: 'Default', 
@@ -103,6 +114,15 @@ block content
             .pagination
                 h3 pagination
                 include ../components/pagination/pagination
+    
+    .dropdowns
+        .dropdowns__column_type_conveniences
+            +dropdown({headerTitle: 'Dropdown', headerSetting: 'Default', classDropdown: 'conveniences', menuOpen: '', widthSize: 'dropdown-width-medium', dataItem: [{optionId: 'bedroom', defaultcount: 2, mincount: 1, itemText: 'спальни'}, {optionId: 'bed', defaultcount: 2, mincount: 1, itemText: 'кровати'}, {optionId: 'bathroom', defaultcount: '0', mincount: '0', itemText: 'ванные комнаты'}]})
+            +dropdown({marginTop: 'dropdown-open', headerTitle: 'Dropdown', headerSetting: 'expanded', classDropdown: 'conveniences', menuOpen: 'menu-open', widthSize: 'dropdown-width-medium', dataItem: [{optionId: 'bedroom', defaultcount: 2, mincount: 1, itemText: 'спальни'}, {optionId: 'bed', defaultcount: 2, mincount: 1, itemText: 'кровати'}, {optionId: 'bathroom', defaultcount: '0', mincount: '0', itemText: 'ванные комнаты'}]})
+        .dropdowns__column_type_empty-visitors
+            +dropdown({headerTitle: 'Dropdown', headerSetting: '', classDropdown: 'visitors', menuOpen: 'menu-open', widthSize: 'dropdown-width-large', dataItem: [{optionId: 'adult', defaultcount: '0', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '0', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}]})
+        .dropdowns__column_type_has-visitors
+            +dropdown({headerTitle: 'Dropdown', headerSetting: '', classDropdown: 'visitors', menuOpen: 'menu-open', widthSize: 'dropdown-width-large', dataItem: [{optionId: 'adult', defaultcount: '2', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '1', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}]})
     
     .list-checkbox
         .checkbox-list
