@@ -1,0 +1,33 @@
+.block-comment {
+    margin-top: 23px;
+    margin-left: -2px;
+    color: $dark-shade-75;
+    display: flex;
+}
+
+.input-like {
+    margin-top: 12px;
+    padding-left: 5px;
+}
+
+.user-avatar {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+    border-radius: 32px;
+    margin-right: 10px;
+}
+
+.user-comment {
+    width: 653px;
+
+    &__name {
+        font-weight: bold;
+    }
+
+    &__text {
+        margin-top: 10px;
+    }
+}

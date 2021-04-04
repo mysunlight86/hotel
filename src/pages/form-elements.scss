@@ -10,6 +10,9 @@
 @import "./../components/expandable-checkbox-list/expandable-checkbox-list";
 @import "./../components/bullet-list/bullet-list";
 @import "./../components/dropdown/dropdown";
+@import "./../components/datepicker/datepicker";
+@import "./../components/item-comfort/item-comfort";
+@import "./../components/comment/comment";
 
 .elements {
     margin: 0 auto;
@@ -29,6 +32,11 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
+}
+
+.elements__row-flex {
+    display: flex;
+    justify-content: space-between;
 }
 
 .field-switches {
@@ -114,4 +122,24 @@
 
 .list-checkbox__bullet-list {
     max-width: ($md-column-width/$main-font-size)*1rem;
+}
+
+.comfort {
+    margin: 0 auto;
+    max-width: (1440px - 2*140px)/$main-font-size*1rem;
+    margin-top: (100px/$main-font-size)*1rem;
+    margin-bottom: (131px/$main-font-size)*1rem;
+    display: flex;
+
+    &__enumeration {
+        display: grid;
+        grid-gap: (20px/$main-font-size)*1rem;
+        margin-right: (167px/$main-font-size)*1rem;
+    }
+
+    &__comment {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-gap: (10px/$main-font-size)*1rem;
+    }
 }
