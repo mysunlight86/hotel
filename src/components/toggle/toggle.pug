@@ -1,0 +1,9 @@
+mixin toggle(options)
+    div
+        label
+            if options.inputChecked
+                input.toggle-value(type='checkbox' name='toggle-value' value=options.inputValue checked='')
+            else
+                input.toggle-value(type='checkbox' name='toggle-value' value=options.inputValue)
+            .toggle
+            span #{options.variation}

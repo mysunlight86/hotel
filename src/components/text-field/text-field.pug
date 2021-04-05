@@ -1,0 +1,12 @@
+mixin text-field(options)
+    label
+        .elements__field-header
+            h3 #{options.headerTitle}
+            h3.elements__field-header_color_light #{options.headerSetting}
+        input(
+            type=options.inputType 
+            placeholder=options.inputPlaceholder 
+            value=options.inputValue 
+            class="elements__text-field" + ' ' + options.subscription + ' ' + options.width + ' ' + options.dateMasked 
+            pattern=options.pattern)
+        span.material-icon

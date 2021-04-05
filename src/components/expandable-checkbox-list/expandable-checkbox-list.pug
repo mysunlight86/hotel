@@ -1,0 +1,9 @@
+mixin details(options)
+    if options.detailsOpen
+        details(open='')
+            summary.summary_open #{options.summaryText}
+            block
+    else
+        details
+            summary #{options.summaryText}
+            block

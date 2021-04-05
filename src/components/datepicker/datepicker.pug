@@ -1,0 +1,6 @@
+mixin datepicker(options)
+    label
+        .elements__field-header(class=options.width)
+            h3 #{options.headerTitle}
+        input(type='text' class='elements__text-field datepicker-here mydatepicker ' + options.class + ' ' + options.width placeholder=options.inputPlaceholder)
+        span.material-icon

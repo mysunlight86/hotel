@@ -1,0 +1,88 @@
+.button {
+    cursor: pointer;
+    background-color: transparent;
+    font-family: Montserrat;
+    padding: 0px;
+    border: 2px solid transparent;
+    border-radius: 22px;
+
+    &_fill-100 {
+        background: $purple-gradient;
+        color: #fff;
+    }
+
+    &_fill-50 {
+        @extend .button_fill-100;
+        opacity: 0.5;
+    }
+
+    &_button-text {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 44px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &_border-fill-100 {
+        background-image: linear-gradient(#ffffff, #ffffff), $purple-gradient;
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        color: $purple;
+    }
+
+    &_border-fill-50 {
+        @extend .button_border-fill-100;
+        opacity: 0.5;
+    }
+
+    &_button-small {
+        width: auto;
+        padding: 0px 19px;
+        height: 34px;
+        line-height: normal;
+        border-radius: 22px;
+    }
+
+    &_button-big {
+        @extend .button_button-small;
+        width: 318px;
+        height: 44px;
+        padding-left: 16px;
+        position: relative;
+        &:before {
+            content: "\e5c8";
+            font-family: Material Icons;
+            font-size: 24px;
+            font-weight: normal;
+            color: #fff;
+            position: absolute;
+            right: 10px;
+            top: 11px;
+        }
+    }
+
+    &_button-transparent {
+        line-height: 15px;
+        width: auto;
+        height: auto;
+    }
+
+    &_color-active {
+        color: $purple;
+    }
+
+    &_color-passive {
+        color: $dark-shade-50;
+    }
+}
+
+button.create {
+    padding: 20px 16px;
+    line-height: 0px;
+}
+
+button.login {
+    padding: 20px 24px;
+    line-height: 0px;
+}

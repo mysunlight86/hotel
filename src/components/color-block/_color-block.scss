@@ -1,0 +1,58 @@
+.two-columns__color-row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: (40px/$main-font-size)*1rem;
+    align-items: center;
+}
+
+.two-columns__color-block {
+    height: (70px/$main-font-size)*1rem;
+    width: (70px/$main-font-size)*1rem;
+    border-radius: (6px/$main-font-size)*1rem;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.two-columns__color-title {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.two-columns__color-name {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.block_opacity_100 {
+    background-color: $dark-shade-100;
+}
+
+.block_opacity_75 {
+    background-color: $dark-shade-75;
+}
+
+.block_opacity_50 {
+    background-color: $dark-shade-50;
+}
+
+.block_opacity_25 {
+    background-color: $dark-shade-25;
+}
+
+.block_opacity_5 {
+    background-color: $dark-shade-5;
+}
+
+.block_purple {
+    background-color: $purple;
+}
+
+.block_green {
+    background-color: $green;
+}

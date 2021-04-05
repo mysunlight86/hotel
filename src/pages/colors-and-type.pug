@@ -4,7 +4,25 @@ block variables
     - var title = 'Toxin - uikit (colors and type)';
     - var description = 'Подготовка базовых элементов';
 
+block header
+    +logo-icon()
+
 block content
-    .content-wrapper
-        .content-wrapper__logo
-            +logo()
+    .two-columns
+        .two-columns__column-colors
+            include ../components/color-block/color-block
+            +color-row({className: 'block_opacity_100', title: 'Dark Shade 100%', name: '#1F2041'})
+            +color-row({className: 'block_opacity_75', title: 'Dark Shade 75%', name: '#1F2041'})
+            +color-row({className: 'block_opacity_50', title: 'Dark Shade 50%', name: '#1F2041'})
+            +color-row({className: 'block_opacity_25', title: 'Dark Shade 25%', name: '#1F2041'})
+            +color-row({className: 'block_opacity_5', title: 'Dark Shade 5%', name: '#1F2041'})
+            +color-row({className: 'block_purple', title: 'Purple', name: '#BC9CFF'})
+            +color-row({className: 'block_green', title: 'Green', name: '#6FCF97'})
+
+        .two-columns__column-type
+            include ../components/tag-block/tag-block
+            +tag-block({tagName: 'h1', tagText: 'H1', text: 'This one is the sub-section or widget title'})
+            +tag-block({tagName: 'h2', tagText: 'H2', text: 'Next one is the item title inside widgets'})
+            +tag-block({tagName: 'h3', tagText: 'H3', text: 'This is a label or CTA text'})
+            +tag-block({tagName: 'p', tagText: 'Body', text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
+            

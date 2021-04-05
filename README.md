@@ -40,7 +40,6 @@ Project for page layout for finding hotel rooms. The source codes of the project
     * webpack-dev-server &mdash; a development server
     * html-webpack-plugin &mdash; creates an HTML file based on a template
     * clean-webpack-plugin &mdash; cleans up the dist directory every time the project is built. This allows you to automatically delete old files that are no longer needed.
-    * copy-webpack-plugin &mdash; сopies individual files or entire directories, which already exist, to the build directory.
     * cross-env &mdash; run scripts that set and use environment variables across platforms
     * ProvidePlugin &mdash; Automatically load modules instead of having to import or require them everywhere.
 2. [babel](https://babeljs.io/)
@@ -58,6 +57,11 @@ Project for page layout for finding hotel rooms. The source codes of the project
     * node-sass &mdash; a package that compiles Sass to CSS
     * sass-loader &mdash; downloads SCSS and compiles it to CSS
 4. [pug](https://pugjs.org/api/getting-started.html)
+    * pug &mdash; The general rendering process of Pug is simple. pug.compile() will compile the Pug source code into a JavaScript function that takes a data object (called “locals”) as an argument. Call that resultant function with your data, and voilà!, it will return a string of HTML rendered with your data.
     * pug-loader &mdash; loads Pug and Jade templates and returns a function
 5. [jquery](https://jquery.com/)
     * jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
+    * [jquery.maskedinput](https://github.com/digitalBush/jquery.maskedinput) This is a masked input plugin for the jQuery javascript library. It allows a user to more easily enter fixed width input where you would like them to enter the data in a certain format (dates, phone numbers, etc).
+    * [webpack-jquery-ui](https://www.npmjs.com/package/webpack-jquery-ui) &mdash; This one package will let you use jquery and jquery-ui (v.1.12.1, for jQuery1.7+) in your project.
+    * [item-quantity-dropdown jQuery plugin](https://www.npmjs.com/package/item-quantity-dropdown) &mdash; Dropdown menu to select items with quantities.
+    * [air datepicker](https://github.com/t1m0n/air-datepicker) &mdash; Lightweight customizable cross-browser jQuery datepicker, built with es5 and css-flexbox.

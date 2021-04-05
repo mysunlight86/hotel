@@ -1,0 +1,23 @@
+.item-comfort {
+    padding: 23px 0px 17px;
+    width: 280px;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    display: flex;
+    color: $dark-shade-75;
+
+    &__description {
+        margin-left: 10px;
+    }
+
+    &__description-title {
+        font-weight: bold;
+    }
+}
+
+.material-icons.md-purple {
+  color: $purple;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}

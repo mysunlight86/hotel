@@ -1,0 +1,231 @@
+@import "./air-datepicker";
+
+input.mydatepicker + span.material-icon:before {
+    content: "\e5cf";
+    font-family: Material Icons;
+    color: $dark-shade-50;
+    position: absolute;
+    font-size: 24px;
+    top: -3px;
+    right: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+input.none {
+    display: none;
+}
+
+.period {
+    text-transform: lowercase;
+}
+
+.mydatepicker {
+    padding: 7px 14px;
+    // height: 44px;
+
+    &::placeholder {
+        color: $dark-shade-25;
+    }
+}
+
+.datepicker {
+    width: 320px;
+    box-sizing: border-box;
+    padding: 20px;
+
+    &--cells {
+        margin-top: -3px;
+    }
+}
+
+.datepicker.-bottom-left-.-from-bottom-.active {
+    margin-top: -7px !important;
+}
+
+.datepicker--pointer {
+    display: none;
+}
+
+.datepicker--nav {
+    border: none;
+    min-height: 0;
+    padding: 0;
+
+    &-action {
+        position: relative;
+
+        svg {
+            display: none;
+        }
+
+        &:before {
+            font-family: Material Icons;
+            font-size: 24px;
+            line-height: 20px;
+            position: absolute;
+            color: $purple;
+        }
+    }
+
+    &-title {
+        // font-family: $heading-font;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 24px;
+    }
+}
+
+.datepicker--nav-action[data-action="prev"] {
+    &:before {
+        content: "\e5c4";
+        left: 0px;
+    }
+}
+
+.datepicker--nav-action[data-action="next"] {
+    &:before {
+        content: "\e5c8";
+        right: 0px;
+    }
+}
+
+.datepicker--body {
+    margin-top: 5px;
+}
+
+.datepicker--content {
+    padding: 4px 0 0;
+    //     font-family: $main-font;
+    //     font-size: 12px;
+    //     line-height: 15px;
+}
+
+.datepicker--days-names {
+    margin-top: 24px;
+}
+
+.datepicker--day-name {
+    font-weight: bold;
+    color: $purple;
+}
+
+.datepicker--cell-day {
+    color: $dark-shade-50;
+}
+
+.-other-month- {
+    color: $dark-shade-25;
+}
+
+.datepicker--day-name,
+.datepicker--cell {
+    width: 39.5px;
+    height: 40px;
+    box-sizing: border-box;
+    font-family: $main-font;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.datepicker--cell {
+    border-radius: 22px;
+
+    &.-current- {
+        background: $green-gradient;
+        color: #ffffff;
+    }
+
+    &:hover,
+    &.-current-:hover,
+    &.-selected-,
+    &.-selected-:hover,
+    &.-range-from-,
+    &.-range-to-,
+    &.-range-from-:hover,
+    &.-range-to-:hover,
+    &.datepicker--cell-day.-range-from-.-current-.-selected- {
+        background: $purple-gradient;
+        color: #ffffff;
+        border-radius: 22px;
+    }
+
+    &.-range-from-,
+    &.-range-to- {
+        position: relative;
+    }
+
+    &.-range-from-:after,
+    &.-range-to-:before {
+        content: "";
+        width: 40px;
+        height: 40px;
+        background: $purple-gradient;
+        opacity: 0.25;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &.-range-from-:after {
+        border-radius: 22px 0px 0px 22px;
+    }
+
+    &.-range-to-:before {
+        border-radius: 0 50% 50% 0;
+    }
+
+    &.-in-range- {
+        background: $purple-gradient;
+        opacity: 0.25;
+    }
+}
+
+.datepicker--cell.-selected-,
+.datepicker--cell.-selected-.-current- {
+    background: $purple-gradient;
+    color: #ffffff;
+}
+
+.datepicker--buttons {
+    border: none;
+    justify-content: space-between;
+    padding: 0px;
+    margin-top: 20px;
+}
+
+.datepicker--button {
+    font-family: $main-font;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    height: 15px;
+    box-sizing: border-box;
+    background-color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+span[data-action="clear"] {
+    color: $dark-shade-50;
+}
+
+span[data-action="clear"]:hover {
+    color: $dark-shade-50;
+    background-color: #fff;
+}
+
+span[data-action="apply"] {
+    color: $purple;
+    text-align: right;
+}
+
+span[data-action="apply"]:hover {
+    color: $purple;
+    text-align: right;
+    background-color: #fff;
+}

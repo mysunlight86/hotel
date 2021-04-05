@@ -1,0 +1,16 @@
+mixin checkbox(options)
+    div
+        label
+            if options.inputChecked
+                input(type='checkbox' name='checkbox-value' value=options.inputValue checked='')
+            else
+                input(type='checkbox' name='checkbox-value' value=options.inputValue)
+            if options.optionSimple
+                div #{options.variation}
+            else
+                +addition(options.richData)
+
+mixin addition(data)
+    .div-checkbox
+        h3.title-checkbox #{data.title}
+        p.description-checkbox #{data.description}
