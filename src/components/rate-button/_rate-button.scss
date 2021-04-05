@@ -1,0 +1,44 @@
+.star-rating {
+    padding-top: 16px;
+
+    &__wrap {
+        display: inline-block;
+
+        &:first-child {
+            margin-right: 20px;
+        }
+
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__ico {
+        float: right;
+        cursor: pointer;
+        background: $purple-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        &:before {
+            content: "\e83a";
+            font-family: Material Icons;
+            font-size: 24px;
+        }
+    }
+}
+
+.star-rating__ico:hover:before,
+.star-rating__ico:hover ~ .star-rating__ico:before,
+.star-rating__input:checked ~ .star-rating__ico:before {
+    content: "\e838";
+    font-family: Material Icons;
+    font-size: 24px;
+}

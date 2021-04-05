@@ -1,0 +1,20 @@
+include ../button/button
+
+mixin dropdown(options)
+    .dropdown
+        .elements__field-header(class=options.widthSize)
+            h3 #{options.headerTitle}
+            h3.elements__field-header_color_light #{options.headerSetting}
+        div(class="iqdropdown " + options.classDropdown + " " + options.menuOpen + " " + options.widthSize)
+            p.iqdropdown-selection
+            div(class="iqdropdown-menu " + options.widthSize)
+                each item in options.dataItem
+                    +menuOption(item)
+                .iqdropdown-menu-buttons
+                    +button({type: 'submit', transparent: 'button_button-transparent', buttonWidth: 'button_button-small', buttonStatus: 'button_color-active', styleText: 'button_button-text', buttonValue: 'Применить'})
+                    +button({type: 'reset', transparent: 'button_button-transparent', buttonWidth: 'button_button-small', buttonStatus: 'button_color-passive', styleText: 'button_button-text', buttonValue: 'очистить'})
+
+mixin menuOption(data)
+    .iqdropdown-menu-option(data-id=data.optionId data-defaultcount=data.defaultcount data-mincount=data.mincount)
+        div
+            p.iqdropdown-item #{data.itemText}

@@ -5,14 +5,15 @@
     max-width: (1132px/1440px)*100%;
     margin-left: (150px/1440px)*100%;
     margin-right: (158px/1440px)*100%;
+    margin-top: (37px/$main-font-size)*1rem;
     display: flex;
-    justify-content: space-between;
 }
 
 .two-columns__column-colors {
     max-width: 290px;
     display: grid;
     grid-row-gap: (20px/$main-font-size)*1rem;
+    margin-right: (415px/1440px)*100%;
 }
 
 .two-columns__column-type {

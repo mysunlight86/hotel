@@ -1,0 +1,11 @@
+mixin pagination(options)
+    div(class='page-number' + ' ' + options.pageStaus) #{options.pageValue}
+
+.field-pagination
+    +pagination( {pageStaus: 'page-number_active', pageValue: 1} )
+    +pagination( {pageValue: 2} )
+    +pagination( {pageValue: 3} )
+    +pagination( {pageValue: '...'} )
+    +pagination( {pageValue: 15} )
+    +pagination( {pageStaus: 'page-number_next'} )
+.decryption 1 – 12 из 100+ вариантов аренды

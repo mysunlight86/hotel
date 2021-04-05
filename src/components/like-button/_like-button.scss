@@ -1,0 +1,55 @@
+.like-fields {
+    margin-top: 16px;
+
+    > div {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    label {
+        cursor: pointer;
+    }
+}
+
+.like {
+    width: 40px;
+    height: 20px;
+    border: 1px solid $dark-shade-25;
+    border-radius: 10px;
+    position: relative;
+
+    &:before {
+        content: "\e87e";
+        font-family: Material Icons;
+        position: absolute;
+        left: 6px;
+        bottom: 4px;
+        font-size: 10px;
+        line-height: 9px;
+        color: $dark-shade-25;
+    }
+
+    &:after {
+        content: "2";
+        position: absolute;
+        top: 5px;
+        right: 7px;
+        font-size: 10px;
+        line-height: 12px;
+        color: $dark-shade-25;
+    }
+}
+
+input.like-value:checked {
+  + .like {
+    border-color: $purple;
+  }
+  + .like:before {
+    content: "\e87d";
+    color: $purple;
+  }
+  + .like:after {
+    content: "12";
+    color: $purple;
+  }
+}
