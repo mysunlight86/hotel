@@ -8,8 +8,8 @@ block header
     +logo-icon()
 
 block content
-    .elements
-        .elements__fields
+    .columns.elements
+        .columns__column.columns__column_type_first.elements__fields
             include ../components/text-field/text-field
             +text-field({
                 headerTitle: 'Text Field', 
@@ -47,12 +47,14 @@ block content
                 subscription: '', 
                 width: '', 
                 dateMasked: 'date-masked'})
-            .elements__row-flex
+            .elements__row-flex.elements__margin-top
                 include ../components/datepicker/datepicker
                 +datepicker({headerTitle: 'date Dropdown', class: 'temp', inputPlaceholder: 'ДД.ММ.ГГГГ', width: 'dropdown-width-small'})
                 +datepicker({headerTitle: 'date Dropdown', class: 'temp', inputPlaceholder: '19.08.2019', width: 'dropdown-width-small'})
-            +datepicker({headerTitle: 'filter date dropdown', class: 'period', inputPlaceholder: '19 авг - 23 авг', inputValue: '19 авг - 23 авг', width: 'dropdown-width-medium'})
-            +text-field({
+            .elements__margin-top
+                +datepicker({headerTitle: 'filter date dropdown', class: 'period', inputPlaceholder: '19 авг - 23 авг', inputValue: '19 авг - 23 авг', width: 'dropdown-width-medium'})
+            .elements__margin-top
+                +text-field({
                 headerTitle: 'subscription text field', 
                 headerSetting: '', 
                 inputType: 'email', 
@@ -61,43 +63,42 @@ block content
                 width: 'dropdown-width-medium', 
                 pattern: '([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,})\.([A-z]{2,8})'}) 
 
-        .elements__checkbox-radio-buttons 
-            .field-switches
-                h3 Checkbox Buttons
+        .columns__column.columns__column_type_second.elements__checkbox-radio-buttons 
+            .elements__field-switches
+                h3.elements__header_margin-bottom Checkbox Buttons
                 .checkbox-fields
                     include ../components/checkbox/checkbox
                     +checkbox({inputValue: 'smoke', optionSimple: true, variation: 'Можно курить', inputChecked: false})
                     +checkbox({inputValue: 'pet', optionSimple: true, variation: 'Можно с питомцами', inputChecked: true})
                     +checkbox({inputValue: 'invite', optionSimple: true, variation: 'Можно пригласить гостей (до 10 человек)', inputChecked: true})
-            .field-switches
-                .field-switches
-                    h3 Radio Buttons
-                    .radio-fields
-                        include ../components/radio-button/radio-button
-                        +radioButton({inputValue: 'male', variation: 'Мужчина', inputChecked: true})
-                        +radioButton({inputValue: 'female', variation: 'Женщина', inputChecked: false})
+            .elements__field-switches
+                h3 Radio Buttons
+                .radio-fields
+                    include ../components/radio-button/radio-button
+                    +radioButton({inputValue: 'male', variation: 'Мужчина', inputChecked: true})
+                    +radioButton({inputValue: 'female', variation: 'Женщина', inputChecked: false})
 
-        .elements__toogle-like-rate-buttons 
-            .field-switches
+        .columns__column.columns__column_type_second.elements__toogle-like-rate-buttons 
+            .elements__field-switches
                 h3 Toggle
                 .toggle-fields
                     include ../components/toggle/toggle
                     +toggle({inputValue: 'receive', variation: 'Получать спецпредложения', inputChecked: true})
                     +toggle({inputValue: 'no-receive', variation: 'Получать спецпредложения', inputChecked: false})
-            .field-switches
+            .elements__field-switches
                 h3 like button
                 .like-fields
                     include ../components/like-button/like-button
                     +likeButton({inputValue: 'no-like', inputChecked: false})
                     +likeButton({inputValue: 'like', inputChecked: true})
-            .field-switches
+            .elements__field-switches
                 h3 rate button
                 .star-rating
                     include ../components/rate-button/rate-button
                     +rateButton( {starNumber: 5, checkedNumber: 4, ratingNumber: 1} )
                     +rateButton( {starNumber: 5, checkedNumber: 5, ratingNumber: 2} )
 
-        .elements__slider-buttons-pagination
+        .columns__column.columns__column_type_second.elements__slider-buttons-pagination
             .range-slider
                 include ../components/range-slider/range-slider
                 +rangeSlider({headerTitle: 'Range Slider', inputType: 'text', width: 'dropdown-width-medium'})
@@ -120,17 +121,17 @@ block content
                 h3 pagination
                 include ../components/pagination/pagination
     
-    .dropdowns
-        .dropdowns__column_type_conveniences
+    .columns.dropdowns
+        .columns__column.columns__column_type_first.columns__column_type_conveniences
             +dropdown({headerTitle: 'Dropdown', headerSetting: 'Default', classDropdown: 'conveniences', menuOpen: '', widthSize: 'dropdown-width-medium', dataItem: [{optionId: 'bedroom', defaultcount: 2, mincount: 1, itemText: 'спальни'}, {optionId: 'bed', defaultcount: 2, mincount: 1, itemText: 'кровати'}, {optionId: 'bathroom', defaultcount: '0', mincount: '0', itemText: 'ванные комнаты'}]})
             +dropdown({marginTop: 'dropdown-open', headerTitle: 'Dropdown', headerSetting: 'expanded', classDropdown: 'conveniences', menuOpen: 'menu-open', widthSize: 'dropdown-width-medium', dataItem: [{optionId: 'bedroom', defaultcount: 2, mincount: 1, itemText: 'спальни'}, {optionId: 'bed', defaultcount: 2, mincount: 1, itemText: 'кровати'}, {optionId: 'bathroom', defaultcount: '0', mincount: '0', itemText: 'ванные комнаты'}]})
-        .dropdowns__column_type_empty-visitors
+        .columns__column.columns__column_type_second.columns__column_type_empty-visitors
             +dropdown({headerTitle: 'Dropdown', headerSetting: '', classDropdown: 'visitors', menuOpen: 'menu-open', widthSize: 'dropdown-width-large', dataItem: [{optionId: 'adult', defaultcount: '0', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '0', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}]})
-        .dropdowns__column_type_has-visitors
+        .columns__column.columns__column_type_has-visitors
             +dropdown({headerTitle: 'Dropdown', headerSetting: '', classDropdown: 'visitors', menuOpen: 'menu-open', widthSize: 'dropdown-width-large', dataItem: [{optionId: 'adult', defaultcount: '2', mincount: '1', itemText: 'взрослые'}, {optionId: 'minor', defaultcount: '1', mincount: '0', itemText: 'дети'}, {optionId: 'infant', defaultcount: '0', mincount: '0', itemText: 'младенцы'}]})
     
-    .list-checkbox
-        .checkbox-list
+    .columns.list-checkbox
+        .columns__column.columns__column_type_first
             include ../components/expandable-checkbox-list/expandable-checkbox-list
             +details({detailsOpen: false, summaryText: 'expandable checkbox list'})
             +details({detailsOpen: true, summaryText: 'expandable checkbox list'})
@@ -143,18 +144,18 @@ block content
                     +checkbox({inputValue: 'shampoo', optionSimple: true, variation: 'Шампунь', inputChecked: false})
                     +checkbox({inputValue: 'TV', optionSimple: true, variation: 'Телевизор', inputChecked: false})
                     +checkbox({inputValue: 'shampoo', optionSimple: true, variation: 'Шампунь', inputChecked: false})
-        .rich-checkbox
+        .columns__column.columns__column_type_second
             h3 Rich Checkbox Buttons
             .checkbox-fields
                 +checkbox({inputValue: 'wide corridor', optionSimple: false, richData: {title: 'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.'}, inputChecked: false})
                 +checkbox({inputValue: 'assistant', optionSimple: false, richData: {title: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист и проводит до номера.'}, inputChecked: false})
-        .list-checkbox__bullet-list
+        .columns__column
             h3 bullet list
             include ../components/bullet-list/bullet-list
             +bulletList({items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
     
-    .comfort
-        .comfort__enumeration
+    .columns.comfort
+        .columns__column.columns__column_type_first.comfort__enumeration
             include ../components/item-comfort/item-comfort
             +itemComfort({iconSymbol: 'insert_emoticon', title: 'Комфорт', text: 'Шумопоглощающие стены'})
             +itemComfort({iconSymbol: 'location_city', title: 'Удобство', text: 'Окно в каждой из спален'})

@@ -14,60 +14,88 @@
 @import "./../components/item-comfort/item-comfort";
 @import "./../components/comment/comment";
 
-.elements {
+.columns {
     margin: 0 auto;
     max-width: (1440px - 2*140px)/$main-font-size*1rem;
-    margin-top: (35px/$main-font-size)*1rem;
     display: grid;
     grid-template-columns: repeat(3, auto);
+
+    &__column {
+        width: $lg-column-width;
+
+        &_type_first {
+            margin-right: (126px/$main-font-size)*1rem;
+        }
+
+        &_type_second {
+            margin-right: (72px/$main-font-size)*1rem;
+        }
+
+        &_type_conveniences {
+            display: grid;
+            grid-gap: (20px/$main-font-size)*1rem;
+        }
+
+        &_type_empty-visitors {
+            margin-right: (72px/$main-font-size)*1rem;
+        }
+    }
+}
+
+.elements {
+    margin-top: (35px/$main-font-size)*1rem;
     align-items: start;
-}
 
-.elements__fields {
-    max-width: $lg-column-width;
-    display: grid;
-    grid-gap: (20px/$main-font-size)*1rem;
-    margin-right: (126px/$main-font-size)*1rem;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
+    &__fields {
+        display: grid;
+        grid-gap: (20px/$main-font-size)*1rem;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
 
-.elements__row-flex {
-    display: flex;
-    justify-content: space-between;
-}
+    &__row-flex {
+        display: flex;
+        justify-content: space-between;
+    }
 
-.field-switches {
-    margin-bottom: (41px/$main-font-size)*1rem;
-}
+    &__margin-top {
+        margin-top: (20px/$main-font-size)*1rem;
+    }
 
-.elements__checkbox-radio-buttons {
-    max-width: $md-column-width;
-    margin-right: (132px/$main-font-size)*1rem;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
+    &__field-switches {
+        margin-bottom: (41px/$main-font-size)*1rem;
+    }
 
-.checkbox-fields {
-    margin-top: (17px/$main-font-size)*1rem;
-}
+    &__field-switches:last-of-type {
+        margin-bottom: 0;
+    }
 
-.elements__toogle-like-rate-buttons {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
+    &__header_margin-bottom {
+        margin-bottom: (16px/$main-font-size)*1rem;
+    }
 
-.elements__slider-buttons-pagination {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    &__checkbox-radio-buttons {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    &__toogle-like-rate-buttons {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    &__slider-buttons-pagination {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
 }
 
 .buttons {
@@ -88,58 +116,25 @@
 }
 
 .dropdowns {
-    display: flex;
-    margin: 0 auto;
-    max-width: (1440px - 2*140px)/$main-font-size*1rem;
-}
-
-.dropdowns__column_type_conveniences {
-    margin-right: (181px/$main-font-size)*1rem;
-    display: grid;
-    grid-gap: (20px/$main-font-size)*1rem;
-}
-
-.dropdowns__column_type_empty-visitors {
-    margin-right: (72px/$main-font-size)*1rem;
+    margin-top: (100px/$main-font-size)*1rem;
 }
 
 .list-checkbox {
-    margin: 0 auto;
-    max-width: (1440px - 2*140px)/$main-font-size*1rem;
     margin-top: ((55px+118px)/$main-font-size)*1rem;
-    display: flex;
-}
-
-.checkbox-list {
-    width: ($md-dropdown-width/$main-font-size)*1rem;
-    margin-right: (181px/$main-font-size)*1rem;
-}
-
-.rich-checkbox {
-    width: ($md-dropdown-width/$main-font-size)*1rem;
-    margin-right: (126px/$main-font-size)*1rem;
-}
-
-.list-checkbox__bullet-list {
-    max-width: ($md-column-width/$main-font-size)*1rem;
 }
 
 .comfort {
-    margin: 0 auto;
-    max-width: (1440px - 2*140px)/$main-font-size*1rem;
     margin-top: (100px/$main-font-size)*1rem;
     margin-bottom: (131px/$main-font-size)*1rem;
-    display: flex;
 
     &__enumeration {
         display: grid;
         grid-gap: (20px/$main-font-size)*1rem;
-        margin-right: (167px/$main-font-size)*1rem;
     }
 
     &__comment {
         display: grid;
         grid-template-columns: repeat(2, auto);
-        grid-gap: (10px/$main-font-size)*1rem;
+        grid-gap: (10px/$main-font-size)*1rem (10px/$main-font-size)*1rem;
     }
 }

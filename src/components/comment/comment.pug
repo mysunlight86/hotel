@@ -1,9 +1,9 @@
 mixin comment(options)
-    .user-ui
-        img.user-avatar(src=require('@components/comment/img/' + options.urlImg))
-        .input-like
-            +likeButton( {inputValue: 'like', inputChecked: options.inputChecked} )
+    img.user-avatar(src=require('@components/comment/img/' + options.urlImg))
     .user-comment
         .user-comment__name #{options.name}
         .user-comment__written #{options.written}
-        .user-comment__text #{options.text}
+    .input-like
+        +likeButton( {inputValue: 'like', inputChecked: options.inputChecked} )
+    
+    .user-comment__text #{options.text}

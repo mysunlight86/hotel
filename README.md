@@ -64,3 +64,4 @@ Project for page layout for finding hotel rooms. The source codes of the project
     * [jquery.maskedinput](https://github.com/digitalBush/jquery.maskedinput) This is a masked input plugin for the jQuery javascript library. It allows a user to more easily enter fixed width input where you would like them to enter the data in a certain format (dates, phone numbers, etc).
     * [webpack-jquery-ui](https://www.npmjs.com/package/webpack-jquery-ui) &mdash; This one package will let you use jquery and jquery-ui (v.1.12.1, for jQuery1.7+) in your project.
     * [item-quantity-dropdown jQuery plugin](https://www.npmjs.com/package/item-quantity-dropdown) &mdash; Dropdown menu to select items with quantities.
+    * [air datepicker](https://github.com/t1m0n/air-datepicker) &mdash; Lightweight customizable cross-browser jQuery datepicker, built with es5 and css-flexbox.
