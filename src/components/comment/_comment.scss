@@ -19,11 +19,14 @@
     align-self: end;
 }
 
-.user-comment {
-    width: 653px;
+.comment-info {
+    
     align-self: end;
-
-    &__name {
+    &__user-name {
         font-weight: bold;
     }
+}
+
+.comment-text {
+    width: 653px;
 }
